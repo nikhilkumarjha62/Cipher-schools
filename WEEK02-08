@@ -1,61 +1,18 @@
-import React, { Component } from "react";
-class Name extends Component {
-    State = { name: "Ram Sharma"};
-    setName(e) {
-        this.setState({ ...this.state, name: "Amrit"});
-    };
-    allUsers = [
-        { name: "John",
-          email: "john@gmail.com",
-          phoneNumber: "7583256727",
-        }
+import React from "react";
+const AllUserList = () => {};
+    let allUsers = [
+        name: "John",
+        email: "xyz@gmail.com",
+        phone number: "+91-9876543210",
+    {name: "Ram", email: "ram@gmail.com", phone number: "+91-7413560014"},
+    {name: "Shyam", email: "shyam@gmail.com", phone number: "+91-8419560015"},
     ];
-    render() {
-        return (
-            <div>
-                <Test name = {this.state.name} setName = {this.setName} />
-                <UserDetails keys = {index} user = {user} />
-                {this.allUsers.map(User, index) => (
-                )}
-            </div>
-        );
-    }
-}
-export default allUserList;
-___________________________________________________________________________________________
-
-import React, { Component } from "react";
-class SumNumbers extends Component {
-    State = {
-        firstNumber: 0,
-        secondNumber: 0
-    }
-    render () {
-        return (
-            <div>
-                <input type = "number" onChange = {this.setState({ ... this.State})} />
-            </div>
-            <input
-                type = "number"
-                placeholder="Enter First Name"
-                onChange={(e) => {
-                  this.setState ({ 
-                    ... this.state,
-                    firstNumber: parseInt(e.target.value),
-                });
-            }}
-            />
-            <input
-                type = "number"
-                placeholder="Enter Second Name"
-                onChange={(e) => {
-                  this.setState ({ 
-                    ... this.state,
-                    secondNumber: parseInt(e.target.value),
-                });
-            }}
-            />
-            </div>
-        );
-    }
-}
+    return (
+        <div>
+            <UserDetails user = {allUsers[0]} />
+            <UserDetails user = {allUsers[1]} />
+            <UserDetails user = {allUsers[2]} />
+        </div>
+    );
+};
+export default AllUserList;
